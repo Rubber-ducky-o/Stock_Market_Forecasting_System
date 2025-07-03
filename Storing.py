@@ -1,8 +1,8 @@
 import sqlite3
-symbol = 'APPL'
 
-def table_creating_and_insert(date_time,open_price, high, low, close, volume):
-    TableName = symbol
+
+def table_creating_and_insert(SYMBOL,date_time,open_price, high, low, close, volume):
+    TableName = SYMBOL
     try:
         print('getting database...')
         data_base_file = ('storing_stock_data.db')
@@ -25,8 +25,9 @@ def table_creating_and_insert(date_time,open_price, high, low, close, volume):
         print('table created/found successfully')
 
         cursor.execute(
-        f"INSERT OR IGNORE INTO [{TableName}] (DATE, OPEN, HIGH, LOW, CLOSE, VOLUME)"
-        f"VALUES (?,?,?,?,?,?),"
+        f"INSERT OR IGNORE INTO [{TableName}] "
+        f"(DATE, OPEN, HIGH, LOW, CLOSE, VOLUME)"
+        f"VALUES (?,?,?,?,?,?)",
         (date_time, open_price, high, low, close, volume)
         )
 

@@ -6,6 +6,7 @@ def main():
     try:
         symbol  = input('Please input the company stock you\'d like to check:\n')
         API.get_get_stock(symbol)
+
     except Exception as e:
         print(e)
 

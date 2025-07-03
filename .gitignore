@@ -1,3 +1,5 @@
 /api_key.py
 .env
 /.env
+/storing_stock_data.db
+/AAPL_stock_data.csv
