@@ -33,6 +33,8 @@ def table_creating_and_insert(SYMBOL,date_time,open_price, high, low, close, vol
 
         connect.commit()
         connect.close()
+
+
     except sqlite3.Error as e:
         print(f'Current error: {e}')
 
