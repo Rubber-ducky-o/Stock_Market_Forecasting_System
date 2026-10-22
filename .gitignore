@@ -3,3 +3,5 @@
 /.env
 /storing_stock_data.db
 /AAPL_stock_data.csv
+/stored_stock_data/
+**/__pycache__/

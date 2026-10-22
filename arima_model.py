@@ -21,6 +21,6 @@ def ARIMA_Model(symbol):
     except Exception as e:
         print(f'This error occured {e}')
 
-ARIMA_Model('AAPL')
+
 
 

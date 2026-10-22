@@ -1,11 +1,13 @@
 import sqlite3
-
+from pathlib import Path
 
 def table_creating_and_insert(SYMBOL,date_time,open_price, high, low, close, volume):
     TableName = SYMBOL
+    folder_name = Path('stored_stock_data')
+
     try:
         print('getting database...')
-        data_base_file = ('storing_stock_data.db')
+        data_base_file = folder_name / ('storing_stock_data.db')
         connect = sqlite3.connect(data_base_file)
         print('connect')
         cursor = connect.cursor()
